@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive layout - make two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - make those two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+</style>
+
+<body>
+
+<!-- Header -->
+<div class="header">
+    <h1>Responsive Image Gallery</h1>
+    <p>Resize the browser window to see the responsive effect!</p>
+</div>
+
+<!-- Photo Grid -->
+ <div class="row">
+    <div class="column">
+        <img src="https://i.pinimg.com/originals/40/ce/0e/40ce0eb5a493a22036dd38853e55a0b2.png" style="width: 100%">
+        <img src="https://a-static.besthdwallpaper.com/satoru-gojo-infinity-jujutsu-kaisen-wallpaper-2560x960-86236_87.jpg" style="width: 100%">
+        <img src="https://images6.alphacoders.com/114/1144147.jpg" style="width: 100%">
+        <img src="https://c4.wallpaperflare.com/wallpaper/100/696/960/yuji-itadori-jujutsu-kaisen-sukuna-hd-wallpaper-preview.jpg" style="width: 100%">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP8VdS4ktFkFAjR-zlO7Bd0dGUB8EkrIKSGA&s" style="width: 100%">
+        <img src="https://w0.peakpx.com/wallpaper/424/930/HD-wallpaper-jujutsu-kaisen-anime-anime-gojo-itadori-jujutsu-kaisen-jujutsu-thumbnail.jpg" style="width: 100%">
+        <img src="https://wallpapercave.com/wp/wp10953642.jpg" style="width: 100%">
+    </div>
+
+    <div class="column">      
+        <img src="https://w0.peakpx.com/wallpaper/424/930/HD-wallpaper-jujutsu-kaisen-anime-anime-gojo-itadori-jujutsu-kaisen-jujutsu-thumbnail.jpg" style="width: 100%">
+        <img src="https://wallpapercave.com/wp/wp10953642.jpg" style="width: 100%">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP8VdS4ktFkFAjR-zlO7Bd0dGUB8EkrIKSGA&s" style="width: 100%">
+        <img src="https://a-static.besthdwallpaper.com/satoru-gojo-infinity-jujutsu-kaisen-wallpaper-2560x960-86236_87.jpg" style="width: 100%"> 
+        <img src="https://i.pinimg.com/originals/40/ce/0e/40ce0eb5a493a22036dd38853e55a0b2.png" style="width: 100%">
+        <img src="https://c4.wallpaperflare.com/wallpaper/100/696/960/yuji-itadori-jujutsu-kaisen-sukuna-hd-wallpaper-preview.jpg" style="width: 100%">        
+    </div>
+
+    <div class="column">
+        <img src="https://wallpapercave.com/wp/wp10953642.jpg" style="width: 100%">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP8VdS4ktFkFAjR-zlO7Bd0dGUB8EkrIKSGA&s" style="width: 100%">
+        <img src="https://w0.peakpx.com/wallpaper/424/930/HD-wallpaper-jujutsu-kaisen-anime-anime-gojo-itadori-jujutsu-kaisen-jujutsu-thumbnail.jpg" style="width: 100%">
+        <img src="https://c4.wallpaperflare.com/wallpaper/100/696/960/yuji-itadori-jujutsu-kaisen-sukuna-hd-wallpaper-preview.jpg" style="width: 100%">
+        <img src="https://a-static.besthdwallpaper.com/satoru-gojo-infinity-jujutsu-kaisen-wallpaper-2560x960-86236_87.jpg" style="width: 100%">    
+        <img src="https://images6.alphacoders.com/114/1144147.jpg" style="width: 100%">
+    </div>
+
+    <div class="column">        
+        <img src="https://images6.alphacoders.com/114/1144147.jpg" style="width: 100%">
+        <img src="https://i.pinimg.com/originals/40/ce/0e/40ce0eb5a493a22036dd38853e55a0b2.png" style="width: 100%">    
+        <img src="https://a-static.besthdwallpaper.com/satoru-gojo-infinity-jujutsu-kaisen-wallpaper-2560x960-86236_87.jpg" style="width: 100%">
+        <img src="https://c4.wallpaperflare.com/wallpaper/100/696/960/yuji-itadori-jujutsu-kaisen-sukuna-hd-wallpaper-preview.jpg" style="width: 100%">
+        <img src="https://wallpapercave.com/wp/wp10953642.jpg" style="width: 100%">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP8VdS4ktFkFAjR-zlO7Bd0dGUB8EkrIKSGA&s" style="width: 100%">
+        <img src="https://w0.peakpx.com/wallpaper/424/930/HD-wallpaper-jujutsu-kaisen-anime-anime-gojo-itadori-jujutsu-kaisen-jujutsu-thumbnail.jpg" style="width: 100%">      
+    </div>
+</div>
