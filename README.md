@@ -1,1 +1,1 @@
-Jimmy's shit while learning in SushiVid ><
+Jimmy's shit during intern in SushiVid ><
