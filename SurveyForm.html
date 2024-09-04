@@ -1,0 +1,220 @@
+<!DOTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Encoding character for webpage -->
+    <meta charset="UTF-8"> 
+    <!-- Rendering page using the latest version of IE's rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <!-- Controlling webpage layout on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Show you some colors see see~
+    </title>
+
+    <style>
+        /* Styling Body Elements e.g. Color, Font, Alignment */
+        body {
+            background-color: #edb76b;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+        }
+
+        /* Styling the Form - Color, Padding, Shadow */
+        form {
+            background-color: #f28e46;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
+            justify-content: space-between;
+        }
+
+        /* Styling form-control Class */
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        /* Styling form-control Label */
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+
+
+        /* Flexbox container for Name and Age */
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: left;
+        }
+
+        .flex-item {
+            margin: 0;
+            padding: 0 10px; /* Add padding between items */
+        }
+
+        .name-field {
+            flex: 6; /* 75% of the space */
+        }
+
+        .age-field {
+            flex: 4; /* 25% of the space */
+        }
+
+        .name-field input, .age
+
+        /* Styling Slider */
+        .slidecontainer {
+            width: 100%; /* Width of the outside container */
+        }
+
+        /* The slider itself */
+        .slider {
+            appearance: none;
+            width: 50%;
+            height: 25px;
+            background: #b5afaa;
+            outline: none; /* Remove outline */
+            opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+            -webkit-transition: .2s; /* 0.2 second transition on hover */
+            transition: opacity .2s;
+            border-radius: 12px; /* Rounded corners */
+            padding: 0 2px; /* Add padding inside the slider */
+        }
+
+        /* Mouse-Over Effects */
+        .slider:hover {
+            opacity: 1; /* Fully shown on ouse-over */
+        }
+
+
+        /* Styling form-control - input, select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 2px solid #777;
+            border-radius: 10px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 98%;
+        }
+
+        /* Styling form-control Radio Button & Checkbox*/
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+            border-radius: 8px;
+        }
+
+        /* Styling Button */
+        button {
+            background-color: antiquewhite;
+            border: 1px solid #777;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 15px;
+            display: block;
+            width: 20%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding: 10px; /* Make space for the button inside */
+            margin: auto; /* To make the button in the middle */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>敢敢填，不要怕 🙉</h1>
+
+    <!-- Create Form -->
+    <form id="form">
+        <!-- Details -->
+        <div class="form-control">
+            <div class="flex-container">
+                <div class="flex-item name-field">
+                    <label for="name" id="label-name">Name</label>
+                    <!-- Input Type Text -->
+                    <input type="text" id="name" placeholder="Enter your name" />
+                </div>
+                <div class="flex-item age-field">
+                    <label for="age" id="label-age">Age</label>
+                    <!-- Input Type Text -->
+                    <input type="number" id="age" placeholder="Enter your age" min="0" />
+                </div>
+            </div>            
+        </div>
+
+        <div class="form-control">
+            <label for="email" id="label-email">
+                Email
+            </label>
+            <!-- Input Type Email -->
+            <input type="email" id="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="form-control">
+            <label for="role" id="label-role">
+                Which option best describes you?
+            </label>
+            <!-- Dropdown Options -->
+            <select name="role" id="role">
+                <option value="student">Student</option>
+                <option value="intern">Intern</option>
+                <option value="professional">Professional</option>
+                <option value="monkey">Monkey</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label>
+                To what extend you like Banana?
+            </label>
+            <!-- Input Type Slide Container -->
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div>
+        </div>
+
+        <div class="form-control">
+            <label>What you know wor?
+                <small>(Check the boxes)</small>
+            </label>
+            <!-- Input Type Checkbox -->
+             <label for="input-1">
+                <input type="checkbox" name="input">C</label>
+             </label>
+             <label for="input-2">
+                <input type="checkbox" name="input">C++</label>
+             </label>
+             <label for="input-3">
+                <input type="checkbox" name="input">C--</label>
+             </label>
+             <label for="input-4">
+                <input type="checkbox" name="input">C**</label>
+             </label>
+             <label for="input-5">
+                <input type="checkbox" name="input">C//</label>
+             </label>
+        </div>
+
+        <div class="form-control">
+            <label for="comment">
+                Any comments?
+                    <small>(But you say bad about us I would wack 9 u ah)</small>
+            </label>
+            <!-- Multi-line text input control -->
+            <textarea name="comment" id="comment" rows="4" placeholder="Enter your comment here"></textarea>
+        </div>
+
+            <!-- Multi-line text input control -->
+            <button type="submit" value="submit"><b>Submit</b></button>
+    </form>
+</body>
+
+</html>
