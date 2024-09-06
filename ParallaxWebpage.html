@@ -21,13 +21,24 @@
             margin: auto;
             position: relative;
             left: 500px;
-            top: 400px;
-            width: 250px;
-            height: 32px;
+            top: 250px;
+            width: 300px;
             padding: 10px;
-            background-color: black;
-            color: rgb(100, 178, 246);
+            border-radius: 12px;
+            background: linear-gradient(90deg, rgb(239, 36, 36), rgb(94, 194, 253));
+            color: rgb(0, 0, 0);
             text-align: center;
+            text-transform: uppercase;
+            font-size: 40px;
+            font-family: 'Protest Guerrilla', bold;
+            text-shadow: 2px 2px 10px rgba(107, 211, 252, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
         }
 
         /* Style second parallax */
@@ -43,22 +54,31 @@
         .parallax-2 h1 {
             margin: auto;
             position: relative;
+            right: 350px;
             top: 300px;
             width: 400px;
-            height: 37px;
             padding: 10px;
-            background-color: white;
+            border-radius: 12px;
+            background-color: rgba(210, 167, 167, 0.8);
             color: black;
             text-align: center;
-            font-size: 30px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 35px;
+            font-family: 'Playwrite Cuba';
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            animation: slideIn 2s ease-in-out;
+        }
+
+        /* Slide-in animation */
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
         /* Style third parallax */
         .parallax-3 {
             width: 100%;
             height: 600px;
-            background: url(https://e0.pxfuel.com/wallpapers/562/580/desktop-wallpaper-zoro-black-and-white-zoro-dark.jpg);
+            background: url(https://motionbgs.com/media/4708/zoro-king-of-hell2.jpg);
             background-size: 100% 100%;
             background-attachment: fixed;
         }
@@ -67,40 +87,45 @@
         .parallax-3 h1 {
             margin: auto;
             position: relative;
-            right: 200px;
-            top: 300px;
-            width: 300px;
-            height: 37px;
+            left: 400px;
+            top: 250px;
+            width: 400px;
             padding: 10px;
-            background-color: white;
-            color: black;
+            border-radius: 12px;
+            background: linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+            color: rgb(87, 199, 47);
             text-align: center;
-            font-size: 30px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-transform: uppercase;
+            font-size: 40px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
         }
 
         /* Style fourth parallax */
         .parallax-4 {
             width: 100%;
             height: 600px;
-            background: url(https://wallpapers-clan.com/wp-content/uploads/2024/03/beautiful-nami-one-piece-desktop-wallpaper-preview.jpg);
+            background: url(https://www.ultraimagehub.com/wallpapers/tr:flp-false,gx-0.6,gy-0.5,q-75,rh-3264,rw-5824,th-1080,tw-1920/1224930624767397918.jpeg);
             background-size: 100% 100%;
             background-attachment: fixed;
         }
 
-        /* Style the title of third parallax */
+        /* Style the title of fourth parallax */
         .parallax-4 h1 {
             margin: auto;
             position: relative;
-            top: 300px;
-            width: 100px;
-            height: 40px;
+            top: 280px;
+            width: 200px;
             padding: 10px;
-            background-color: rgb(10, 3, 3);
-            color: rgb(239, 127, 15);
+            border-radius: 12px;
+            background: linear-gradient(90deg, rgb(252, 244, 150), rgba(243, 137, 85, 0.922));
+            color: rgb(123, 207, 246);
             text-align: center;
-            font-size: 30px;
-            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-transform: uppercase;
+            font-family: 'Sevillana', cursive;
+            font-size: 40px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
         }
 
         /* Style content */
@@ -110,15 +135,6 @@
             color: white;
             font-size: 17px;
             text-align: justify;
-        }
-
-        .con-2 {
-            text-align: center;
-            padding: 100px;
-            font-size: 17px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            background-color: black;
-            color: white;
         }
     </style>
 </head> 
@@ -142,9 +158,9 @@
     </div>
 
     <!-- Content of the second parallax -->
-    <div class="con-2">
+    <div class="con-1">
         <p>
-            <b>Monkey D. Luffy</b>Monkey D. Luffy, also known as 'Straw Hat Luffy', is the strongest combatant of the Straw Hat Pirates due to his fearless pursuit of the legendary treasure of the late <b>Gol D. Roger</b>. His strength is recognized by many, including his opponents, despite his age and appearance often leading to underestimation. <br><br>Luffy's accomplishments in battle are numerous, including defeating multiple Warlords of the Sea. His heritage as the son of Monkey D. Dragon, the leader of the Revolutionary Army, also contributes to his reputation as a formidable fighter.
+            <b>Monkey D. Luffy</b>, also known as 'Straw Hat Luffy', is the strongest combatant of the Straw Hat Pirates due to his fearless pursuit of the legendary treasure of the late <b>Gol D. Roger</b>. His strength is recognized by many, including his opponents, despite his age and appearance often leading to underestimation. <br><br>Luffy's accomplishments in battle are numerous, including defeating multiple Warlords of the Sea. His heritage as the son of Monkey D. Dragon, the leader of the Revolutionary Army, also contributes to his reputation as a formidable fighter.
         </p>
     </div>
 
@@ -166,7 +182,7 @@
     </div>
 
     <!-- Content of the fourth parallax -->
-    <div class="con-2">
+    <div class="con-1">
         <p>
             "Cat Burglar" <b>Nami</b> is the navigator of the Straw Hat Pirates and one of the Senior Officers of the Straw Hat Grand Fleet. <br><br>She is the third member of the crew and the second to join, doing so during the Orange Town Arc. She is the adoptive sister of Nojiko after the two were orphaned and taken in by Bell-mère.
         </p>
