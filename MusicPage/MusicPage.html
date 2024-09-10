@@ -5,6 +5,8 @@
         * {
             padding: 0;
             margin: 0;
+            height: 100%;
+            overflow: hidden; /* Prevent scrolling*/
         }
 
         .container {
@@ -15,15 +17,41 @@
             background-size: cover;
             background-position: center;
             position: relative;
-            animation: moveBackground 10s linear infinite;
         }
 
+        /* The animation to make background keep moving */
         @keyframes moveBackground {
             0% {
                 background-position: 0% 0%;
             }
             100% {
                 background-position: 100% 100%;
+            }
+        }
+
+        /* Styling of the glowing Sparkles for background */
+        .sparkle {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 
+            0 0 50px rgba(255, 255, 255, 0.8), 
+            0 0 70px rgba(255, 255, 255, 0.8),
+            0 0 80px rgba(255, 255, 255, 1);
+            animation: floatSparkles 15s linear infinite;
+            opacity: 0;
+        }
+
+        @keyframes floatSparkles {
+            0% {
+                transform: translateY(100vh) translateX(0vw);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100vw);
+                opacity: 0;
             }
         }
 
@@ -59,14 +87,35 @@
 
         .left-col h1 {
             font-size: 100px;
-            color: rgb(173, 226, 255);
-            text-shadow: 2px 2px 4px #090a0a;
+            color: rgb(85, 192, 250);
+        }
+
+        /* Style the title with glowing effect */
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 
+                0 0 20px #fff, 
+                0 0 30px rgb(93, 194, 249),
+                0 0 40px rgb(93, 194, 249),
+                0 0 50px rgb(93, 194, 249),
+                0 0 60px rgb(93, 194, 249),
+                0 0 70px rgb(93, 194, 249);
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 
+                0 0 30px #628698, 
+                0 0 40px #628698, 
+                0 0 50px #628698, 
+                0 0 60px #628698, 
+                0 0 70px #628698, 
+                0 0 80px #628698;
+            }
         }
 
         .right-col {
-            float: right;
-            margin-right: 10%;
-            margin-top: -5%;
+            position:fixed;
+            right: 10%;
+            top: 65%;
             display: flex;
             align-items: center;
         }
@@ -76,6 +125,7 @@
             color: aliceblue;
             font-weight: 650;
             margin-right: 20px;
+            line-height: 0.75; /* Set line height to match the Icon */
             text-shadow: 2px 2px 4px #090a0a;
         }
 
@@ -83,8 +133,7 @@
         #playPauseIcon {
             cursor: pointer;
             color: white;
-            width: 40px;
-            vertical-align: middle;
+            width: 50px;
             text-shadow: 2px 2px 4px #090a0a;
         }
     </style>
@@ -123,17 +172,49 @@
     <script>
         let mysound = document.getElementById("mysound");
         let icon = document.getElementById("playPauseIcon");
+        let container = document.querySelector(".container");
+        let title = document.querySelector(".left-col h1");
 
-        // Create a function that will change, to pause or play
+        function createSparkles() {
+            for (let i = 0; i < 30; i++) {
+                let sparkle = document.createElement('div');
+                sparkle.classList.add('sparkle');
+            
+            // Randomize the starting position
+            sparkle.style.left = Math.random() * 100 + 'vw';
+            sparkle.style.top = Math.random() * 100 + 'vh';
+            // Random duration between 5-10s
+            sparkle.style.animationDuration = (Math.random() * 5 + 5) + 's';
+
+            container.appendChild(sparkle);
+            }
+        }
+
+        function removeSparkles() {
+            let sparkles = document.querySelectorAll('.sparkle');
+            sparkles.forEach(sparkle => sparkle.remove());
+        }
+
+        // Function to handle play/pause
         icon.onclick = function() {
             if (mysound.paused) {
                 mysound.play();
                 icon.classList.remove('fa-play');
                 icon.classList.add('fa-pause');
+                // Animation when music plays
+                container.style.animation = "moveBackground 20s linear infinite";
+                title.style.animation = "glow 2s ease-in-out infinite alternate";
+                // Create Sparkles
+                createSparkles();
             } else {
                 mysound.pause();
                 icon.classList.remove('fa-pause');
                 icon.classList.add('fa-play');
+                // Pause the animation
+                container.style.animation = "none";
+                title.style.animation = "none"; 
+                // Remove Sparkles
+                removeSparkles();
             }
         }
     </script>
