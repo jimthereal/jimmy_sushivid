@@ -34,12 +34,13 @@
             position: fixed;
             width: 10px;
             height: 10px;
-            background-color: rgba(255, 255, 255, 0.6);
+            background-color: rgba(255, 255, 255, 0.811);
             border-radius: 50%;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 
-            0 0 50px rgba(255, 255, 255, 0.8), 
-            0 0 70px rgba(255, 255, 255, 0.8),
-            0 0 80px rgba(255, 255, 255, 1);
+            box-shadow: 
+                0 0 30px rgba(255, 255, 255, 0.3), 
+                0 0 50px rgba(255, 255, 255, 0.5), 
+                0 0 70px rgba(255, 255, 255, 0.8),
+                0 0 80px rgba(255, 255, 255, 1);
             animation: floatSparkles 15s linear infinite;
             opacity: 0;
         }
@@ -78,37 +79,55 @@
         .content {
             width: 100%;
             position: absolute;
-            top: 50%;
+            top: 45%;
         }
 
         .left-col {
-            margin-left: 11%;
+            margin-left: 8%;
+            overflow: visible;
         }
 
         .left-col h1 {
-            font-size: 100px;
-            color: rgb(85, 192, 250);
+            font-size: 120px;
+            color: rgb(206, 231, 245);
+            padding: 50px;
+            text-shadow: 
+                0 0 10px rgba(255, 255, 255, 0.7), 
+                0 0 20px rgba(255, 255, 255, 0.5), 
+                0 0 30px rgba(93, 194, 249, 0.5),
+                0 0 40px rgba(93, 194, 249, 0.4),
+                0 0 50px rgba(93, 194, 249, 0.3),
+                0 0 60px rgba(93, 194, 249, 0.2),
+                0 0 70px rgba(93, 194, 249, 0.1);
+            line-height: 1;  /* Adjust to reduce gaps between lines */
+        }
+
+        .left-col h1 span {
+            font-size: 65px;
+            color: rgb(206, 231, 245);
         }
 
         /* Style the title with glowing effect */
         @-webkit-keyframes glow {
             from {
-                text-shadow: 0 0 10px #fff, 
-                0 0 20px #fff, 
-                0 0 30px rgb(93, 194, 249),
-                0 0 40px rgb(93, 194, 249),
-                0 0 50px rgb(93, 194, 249),
-                0 0 60px rgb(93, 194, 249),
-                0 0 70px rgb(93, 194, 249);
+                text-shadow: 
+                    0 0 10px rgba(255, 255, 255, 0.8), 
+                    0 0 20px rgba(255, 255, 255, 0.6), 
+                    0 0 30px rgba(93, 194, 249, 0.6),
+                    0 0 40px rgba(93, 194, 249, 0.5),
+                    0 0 50px rgba(93, 194, 249, 0.4),
+                    0 0 60px rgba(93, 194, 249, 0.3),
+                    0 0 70px rgba(93, 194, 249, 0.2);
             }
             to {
-                text-shadow: 0 0 20px #fff, 
-                0 0 30px #628698, 
-                0 0 40px #628698, 
-                0 0 50px #628698, 
-                0 0 60px #628698, 
-                0 0 70px #628698, 
-                0 0 80px #628698;
+                text-shadow: 
+                    0 0 20px rgba(255, 255, 255, 0.6), 
+                    0 0 30px rgba(98, 134, 152, 0.5), 
+                    0 0 40px rgba(98, 134, 152, 0.4), 
+                    0 0 50px rgba(98, 134, 152, 0.3), 
+                    0 0 60px rgba(98, 134, 152, 0.2), 
+                    0 0 70px rgba(98, 134, 152, 0.1), 
+                    0 0 80px rgba(98, 134, 152, 0.05);
             }
         }
 
@@ -155,7 +174,7 @@
 
     <div class="content">
         <div class="left-col">
-            <h1>Exil<br><small>Hiboky</small></h1>
+            <h1>Exil<br><span>Hiboky</span></h1>
         </div>
 
         <div class="right-col">
@@ -176,7 +195,7 @@
         let title = document.querySelector(".left-col h1");
 
         function createSparkles() {
-            for (let i = 0; i < 30; i++) {
+            for (let i = 0; i < 50; i++) {
                 let sparkle = document.createElement('div');
                 sparkle.classList.add('sparkle');
             
