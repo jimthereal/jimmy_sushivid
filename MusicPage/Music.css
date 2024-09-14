@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling*/
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://images.alphacoders.com/109/109513.jpg");
+    /* Style the image used */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* The animation to make background keep moving */
+@keyframes moveBackground {
+    0% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Styling of the glowing Sparkles for background */
+.sparkle {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.811);
+    border-radius: 50%;
+    box-shadow: 
+        0 0 30px rgba(255, 255, 255, 0.3), 
+        0 0 50px rgba(255, 255, 255, 0.5), 
+        0 0 70px rgba(255, 255, 255, 0.8),
+        0 0 80px rgba(255, 255, 255, 1);
+    animation: floatSparkles 15s linear infinite;
+    opacity: 0;
+}
+
+@keyframes floatSparkles {
+    0% {
+        transform: translateY(100vh) translateX(0vw);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(100vw);
+        opacity: 0;
+    }
+}
+
+/* Style the list tag to the right of the navigation */
+.nav li {
+    float: right;
+    list-style: none;
+}
+
+/* Style the anchor tags of the navigatio bar */
+.nav a {
+    list-style: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1rem;
+    font-weight: 550;
+    display: block;
+    padding: 5px 35px;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+/* Give position and margin to the content-div */
+.content {
+    width: 100%;
+    position: absolute;
+    top: 45%;
+}
+
+.left-col {
+    margin-left: 8%;
+    overflow: visible;
+}
+
+.left-col h1 {
+    font-size: 120px;
+    color: rgb(206, 231, 245);
+    padding: 45px;
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.7), 
+        0 0 20px rgba(255, 255, 255, 0.5), 
+        0 0 30px rgba(93, 194, 249, 0.5),
+        0 0 40px rgba(93, 194, 249, 0.4),
+        0 0 50px rgba(93, 194, 249, 0.3),
+        0 0 60px rgba(93, 194, 249, 0.2),
+        0 0 70px rgba(93, 194, 249, 0.1);
+    line-height: 1;  /* Adjust to reduce gaps between lines */
+}
+
+.left-col h1 span {
+    font-size: 50px;
+    color: rgb(206, 231, 245);
+    margin-left: 5%;
+}
+
+/* Style the title with glowing effect */
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 
+            0 0 10px rgba(255, 255, 255, 0.8), 
+            0 0 20px rgba(255, 255, 255, 0.6), 
+            0 0 30px rgba(93, 194, 249, 0.6),
+            0 0 40px rgba(93, 194, 249, 0.5),
+            0 0 50px rgba(93, 194, 249, 0.4),
+            0 0 60px rgba(93, 194, 249, 0.3),
+            0 0 70px rgba(93, 194, 249, 0.2);
+    }
+    to {
+        text-shadow: 
+            0 0 20px rgba(255, 255, 255, 0.6), 
+            0 0 30px rgba(98, 134, 152, 0.5), 
+            0 0 40px rgba(98, 134, 152, 0.4), 
+            0 0 50px rgba(98, 134, 152, 0.3), 
+            0 0 60px rgba(98, 134, 152, 0.2), 
+            0 0 70px rgba(98, 134, 152, 0.1), 
+            0 0 80px rgba(98, 134, 152, 0.05);
+    }
+}
+
+.right-col {
+    position: fixed;
+    right: 10%;
+    top: 65%;
+    display: flex;
+    align-items: center;
+}
+
+.right-col p {
+    font-size: 21px;
+    color: aliceblue;
+    font-weight: 650;
+    margin-right: 20px;
+    line-height: 0.75; /* Set line height to match the Icon */
+    text-shadow: 2px 2px 4px #090a0a;
+}
+
+/* Icon styling */
+#playPauseIcon {
+    cursor: pointer;
+    color: white;
+    width: 50px;
+    text-shadow: 2px 2px 4px #090a0a;
+}
