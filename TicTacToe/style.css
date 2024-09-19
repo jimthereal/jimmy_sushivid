@@ -51,7 +51,6 @@ section {
     flex-direction: column;
     justify-content: space-between;
 }
-.sidebar > * {}
 #status {flex: 4;}
 
 .button_box {
