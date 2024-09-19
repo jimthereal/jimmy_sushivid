@@ -4,6 +4,8 @@
     <link rel="icon" href="megalobox.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <title>MEGALOBOX</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -26,18 +28,24 @@
                 ROUND 4
             </a>
             <a href="#Fifth" class="nav-link">
-                ROUND 5
+                FINAL ROUND
             </a>
         </nav>
-
-        <audio autoplay>
-            <source src="MEGALOBOX.mp3" type="audio/mpeg">
-            Your browser doesn't support the audio element.
-        </audio>
 
         <main id="main-doc">
             <section class="main-section" id="Intro">
                 <header>INTRODUCTION</header>
+                <h1 id="game-start">
+                    <!-- Use # for better readability; aria-label is for accessibility -->
+                    <a href="#" id="playPauseButton" aria-label="Play or Pause">
+                        <audio id="mysound" loop>
+                            <source src="MEGALOBOX.mp3" type="audio/mp3">
+                            Your browser doesn't support the audio element.
+                        </audio>
+                        <i class="fas fa-play icon" id="playPauseIcon"></i>
+                        GAME START!
+                    </a>
+                </h1>
                 <h2>もう一度、夢を生きるー</h2>
                 <p>
                     肉体とギア・テクノロジーを融合させた究極の格闘技“メガロボクス”。<br><br>その頂点を決める大会“メガロニア”に、ギアを身に着けず生身の体で挑んだボクサー“ギアレス・ジョー”。<br><br>最下層の地下リングからたった三ヶ月で頂点へと駆け上がり、奇跡の優勝を遂げた伝説のチャンピオンの姿に人々は熱狂し夢を見た。<br><br>しかし、それから７年後、“ギアレス・ジョー”は再び地下のリングに立っていた。傷だらけの身体にギアを装着し、自ら“ノマド”と名を変えて……。
@@ -92,7 +100,7 @@
 
             <section class="main-section" id="Fifth">
                 <header>
-                    ROUND 5
+                FINAL ROUND
                 </header>
                 <h2>翼ある者は翼なき者を背負い、翼なき者は翼ある者を祝福する</h2>
                 <p>
@@ -102,5 +110,7 @@
             </section>
         </main>
     </div>
+
+    <script src="function.js"></script>
 </body>
 </html>
