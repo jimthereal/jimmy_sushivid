@@ -89,7 +89,7 @@ h1 a {
     transition: background-color 0.3s, color 0.3s;
 }
 
-h1:hover {
+h1 a:hover {
     background-color: #fa1414;
     color: #fff;
 }
