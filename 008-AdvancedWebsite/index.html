@@ -1,12 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Advanced Website">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta property=og:image content="008-AdvancedWebsite/image/meta-image.jpg"> <!-- To put the meta image to show up when people search -->
+<meta property=og:title content="Advanced Website">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index, follow">
+
 <head>
     <meta charset="UTF-8">
     <title>Advanced Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Use FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="https://i.pinimg.com/originals/af/d9/73/afd973229d89989f2b92e7976f599ac8.gif"> <!-- To put the favicon on the tab -->    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Load font library -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/3b8c8e4b3e.js"></script>
 </head>
 
+<body id="body-pd">
+    <div class="l-navbar" id="navbar">
+        <nav class="nav">
+            <div>
+                <div class="nav__brand">
+                    <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                    <!-- The href should navigate to a website -->
+                    <a href="#" class="nav__logo">Cowboy Bebop</a>
+                </div>
+
+                <div class="nav__list">
+                    <a href="index.html" class="nav__link active">
+                        <ion-icon name="cowboy-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Hey, Cowboy!</span>
+
+                        <!-- The href should navigate to a website -->
+                        <a href="#" target="_blank" class="nav__link">
+                            <ion-icon name="bar-chart-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">World</span>
+                        </a>
+                    </a>
+
+                    <a href="#about" class="nav__link">
+                        <ion-icon name="information-circle-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Story</span>
+                    </a>
+
+                    <a href="#introduction" class="nav__link">
+                        <ion-icon name="logo-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Character</span>
+                    </a>
+
+                    <a href="#features" class="nav__link">
+                        <ion-icon name="layers-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Mechanic</span>
+                    </a>
+
+                    <a href="#client" class="nav__link">
+                        <ion-icon name="ribbon-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Special</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <a href="index.html" id="scroll-up" style="display: inline;"></a>
+    <!-- Maker badge -->
+    <script type="text/javascript">
+        (function (w,d) {
+            w.makerbadge = {}, methods = ['init'];
+            w.makerbadge._c = [];
+            methods.forEach(m => {
+                w.makerbadge[m] = function () {
+                    w.makerbadge._c.push([m, arguments]);
+                };
+            });
+
+            var el = d.createElement('script');
+            el.type = 'text/javascript';
+            el.async = true;
+            el.src = "https://makerbadge.com/js/shim.js";
+
+            var before = d.getElementsByTagName('script')[0];
+            before.parentNode.insertBefore(el, before);
+        }) (window, document);
+        makerbadge.init({ clientId: "d99137e9-ad0d-4d55-b23e-76e129def979", position: "left" }); 
+    </script>
+
+    <!-- Ion Icons -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <script src="main.js"></script>
+</body>
+
 <body>
-    
+    <nav class="navigation">
+        <a href="#" class="logo">
+            <img src="image/logo.jpg" alt="Can't display the image!">
+        </a>
+
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" target="_blank">Commands</a></li>
+            <li><a href="#" target="_blank">Join us</a></li>
+            <li><a href="#" target="_blank">Vote</a></li>
+        </ul>
+        <a href="#" class="see-you" target="_blank">
+            <b>See You!</b> 
+        </a>
+    </nav>
+
+    <section id="main">
+        <div class="main-text" data-aos="fade-up">
+            <h1>Cowboy Bebop</h1>
+            <p>Everything has a beginning and an end. <br>Life is just a cycle of starts and stops.</p>
+            <div class="main-btns">
+                <a href="#" target="_blank" class="btn-space"><b>To Space</b></a>
+                <a href="#" target="_blank" class="btn-earth"><b>To Earth</b></a>
+            </div>
+        </div>
+
+        <!-- Mode-BG -->
+        <div class="model">
+            <img src="image/bg1.jpg" data-aos="fade-up">
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="about-text-section" data-aos="fade-up">
+            <div class="about-heading" data-aos="fade-up">
+                <span>About</span>
+                <p>Aboard the spaceship Bebop, a bounty hunter and his group of skilled comrades embark on adventures across the Solar System to capture criminals.</p>
+            </div>
+
+            <div class="about-img" data-aos="fade-up">
+                <img src="image/spike.gif" alt="Group Photo">
+            </div>
+        </div>
+
+        <!-- About Image Section -->
+        <aisle>
+            <div class="about-box-container">
+                <div class="about-box" data-aos="fade-up">
+                    <div class="about-box-icon">
+                        <i>1</i>
+                    </div>
+                    <div class="s-box-text">
+                        <strong>Spike Spiegel</strong>
+                        <p>Voiced by: Kōichi Yamadera (Japanese)<br>Portrayed by: John Cho</p>
+                    </div>
+                </div>
+
+                <div class="about-box" data-aos="fade-up">
+                    <div class="about-box-icon">
+                        <i>2</i>
+                    </div>
+                    <div class="about-box-text">
+                        <strong>Faye Valentine</strong>
+						<p>Voiced by: Megumi Hayashibara (Japanese)<br>Portrayed by: Daniella Pineda</p>
+                    </div>
+                </div>
+
+                <div class="about-box" data-aos="fade-up">
+                    <div class="about-box-icon">
+                        <i>3</i>
+                    </div>
+                    <div class="about-box-text">
+                        <strong>Jet Black</strong>
+						<p>Voiced by: Unshō Ishizuka (Japanese)<br>Portrayed by: Mustafa Shakir</p>
+                    </div>
+                </div>
+
+                <div class="about-box" data-aos="fade-up">
+                    <div class="about-box-icon">
+                        <i>4</i>
+                    </div>
+                    <div class="about-box-text">
+                        <strong>Ed</strong>
+						<p>Voiced by: Aoi Tada (Japanese)<br>Portrayed by: Eden Perkins</p>
+                    </div>
+                </div>
+
+                <div class="about-box" data-aos="fade-up">
+                    <div class="about-box-icon">
+                        <i>5</i>
+                    </div>
+                    <div class="about-box-text">
+                        <strong>Ein</strong>
+						<p>Voiced by: Kōichi Yamadera</p>
+                    </div>
+                </div>
+            </div>
+            
+        </aisle>
+    </section>
+
+
+    <section id="introduction">
+        <!-- Heading -->
+        <div class="intro-heading" data-aos="fade-up">
+            <strong>Introduction</strong>
+            <p>Let me introduce myself!</p>
+        </div>
+
+        <!-- Intro Video -->
+        <div class="intro-video" data-aos="fade-up">
+            <iframe src="" frameborder="0.5"></iframe>
+        </div>
+    </section>
+
+
+    <section id="features">
+        <!-- Heading -->
+        <strong class="feature-heading" data-aos="fade-up">Features</strong>
+
+        <!-- Features -->
+        <div class="feature-box-container">
+            <div class="service-box" data-aos="fade-up">
+                <!-- Icon -->
+                <i class="fas fa-code"></i>
+                <!-- Heading -->
+                <strong>Easy to Use</strong>
+                <!-- Details -->
+                <p>Easy to use and user-friendly interface.</p>
+            </div>
+
+            <div class="service-box" data-aos="fade-up">
+                <!-- Icon -->
+                <i class="fas fa-cogs"></i>
+                <!-- Heading -->
+                <strong>Second</strong>
+                <!-- Details -->
+                <p>Second Input</p>
+            </div>
+
+            <div class="service-box" data-aos="fade-up">
+                <!-- Icon -->
+                <i class="fas fa-drafting-compass"></i>
+                <!-- Heading -->
+                <strong>Third</strong>
+                <!-- Details -->
+                <p>Third Input</p>
+            </div>
+
+            <div class="service-box" data-aos="fade-up">
+                <!-- Icon -->
+                <i class="fas fa-chart-bar"></i>
+                <!-- Heading -->
+                <strong>Fourth</strong>
+                <!-- Details -->
+                <p>Fourth Input</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="get-in-touch" data-aos="fade-up">
+        <span>Get in Touch</span>
+        <a href="#" target="_blank">Contact Me</a>
+    </section>
+
+    <!-- Client -->
+    <section id="client">
+        <div class="client-heading" data-aos="fade-up">
+            <strong class="feature-heading" data-aos="fade-up">Client</strong>
+            <div class="c-box-container">
+                <div class="client-box">
+                    <img src="mario-mystery-box.gif">
+                    <p>Put here</p>
+                </div>
+            </div>
+            <br/>
+
+            <a href="#">
+                <img src="mario-mystery-box.gif">
+            </a>
+            <br/>
+            <a href="#">
+                <img src="mario-mystery-box.gif">
+            </a>
+            <br/>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Copyright -->
+        <span class="copyright">Copyright © HEHEHE. All right reserved.</span>
+        <!-- Footer Social Links -->
+        <div class="footer-social">
+            <!-- Youtube -->
+            <a href="#">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
