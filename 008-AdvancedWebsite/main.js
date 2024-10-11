@@ -1,4 +1,8 @@
-// SMOOTH SCROLLING
+// Fade Up Animation
+AOS.init();
+
+
+// SMOOTH SCROLLING (UP)
 document.addEventListener('DOMContentLoaded', function () {
     var scrollUpButton = document.getElementById('scroll-up');
 
@@ -20,6 +24,88 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+// SMOOTH SCROLLING (MENU)
+document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.menu a[href^="#"]');
+
+    links.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const href = this.getAttribute('href');
+            const offsetTop = document.querySelector(href).offsetTop;
+
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+
+
+// MOVIE
+document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.movie-button a');
+    const movieBox = document.querySelector('.movie-box');
+
+    links.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const videoUrl = this.getAttribute('data-video');
+            movieBox.innerHTML = `<iframe src="${videoUrl}" frameborder="0" allowfullscreen></iframe>`;
+        });
+    });
+});
+
+
+// MODAL
+document.addEventListener('DOMContentLoaded', function () {
+    // Function to open the modal
+    function openModal(modal) {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Disable scrolling
+    }
+
+    // Function to close the modal
+    function closeModal(modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Enable scrolling
+    }
+
+    // Attach event listeners to all buttons with a 'data-modal-target' attribute
+    document.querySelectorAll('[data-modal-target]').forEach(button => {
+        var modalId = button.getAttribute('data-modal-target');
+        var modal = document.querySelector(modalId);
+
+        button.onclick = function () {
+            openModal(modal);
+        };
+
+        modal.querySelector('.close').onclick = function () {
+            closeModal(modal);
+        };
+
+        // Close the modal when clicking outside of it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                closeModal(modal);
+            }
+        }
+
+        // Close the modal when pressing the 'Esc' key
+        document.onkeydown = function (event) {
+            if (event.key === 'Escape') {
+                closeModal(modal);
+            }
+        }
+    });
+});
+
+
+
+
 
 const showMenu = (toggleId, navbarId, bodyId) => {
     const toggle = document.getElementById(toggleId),

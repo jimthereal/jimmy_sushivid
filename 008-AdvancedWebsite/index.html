@@ -1,302 +1,708 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Advanced Website">
-<meta name="keywords" content="HTML, CSS, JavaScript">
-<meta property=og:image content="008-AdvancedWebsite/image/meta-image.jpg"> <!-- To put the meta image to show up when people search -->
-<meta property=og:title content="Advanced Website">
+<meta name="description" content="Kimi No Na Wa">
+<meta name="keywords" content="HTML, CSS, JavaScript, Your Name, Kimi No Na Wa">
+<meta property=og:image content="image/og_image.png">
+<!-- To put the meta image to show up when people search -->
+<meta property=og:title content="Kimi No Na Wa">
 <meta http-equiv="content-language" content="en">
-<meta name="robots" content="index, follow">
 
 <head>
     <meta charset="UTF-8">
-    <title>Advanced Website</title>
+    <title>Kimi No Na Wa</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Use FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="shortcut icon" href="https://i.pinimg.com/originals/af/d9/73/afd973229d89989f2b92e7976f599ac8.gif"> <!-- To put the favicon on the tab -->    
+    <link rel="shortcut icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8MpWRE0FvvMODbymVxk13Sf7JM85d_liKQw&s">
+    <!-- To put the favicon on the tab -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- Load font library -->
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/3b8c8e4b3e.js"></script>
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
 
 <body id="body-pd">
-    <div class="l-navbar" id="navbar">
-        <nav class="nav">
-            <div>
-                <div class="nav__brand">
-                    <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
-                    <!-- The href should navigate to a website -->
-                    <a href="#" class="nav__logo">Cowboy Bebop</a>
-                </div>
-
-                <div class="nav__list">
-                    <a href="index.html" class="nav__link active">
-                        <ion-icon name="cowboy-outline" class="nav__icon"></ion-icon>
-                        <span class="nav__name">Hey, Cowboy!</span>
-
-                        <!-- The href should navigate to a website -->
-                        <a href="#" target="_blank" class="nav__link">
-                            <ion-icon name="bar-chart-outline" class="nav__icon"></ion-icon>
-                            <span class="nav__name">World</span>
-                        </a>
-                    </a>
-
-                    <a href="#about" class="nav__link">
-                        <ion-icon name="information-circle-outline" class="nav__icon"></ion-icon>
-                        <span class="nav__name">Story</span>
-                    </a>
-
-                    <a href="#introduction" class="nav__link">
-                        <ion-icon name="logo-outline" class="nav__icon"></ion-icon>
-                        <span class="nav__name">Character</span>
-                    </a>
-
-                    <a href="#features" class="nav__link">
-                        <ion-icon name="layers-outline" class="nav__icon"></ion-icon>
-                        <span class="nav__name">Mechanic</span>
-                    </a>
-
-                    <a href="#client" class="nav__link">
-                        <ion-icon name="ribbon-outline" class="nav__icon"></ion-icon>
-                        <span class="nav__name">Special</span>
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </div>
-
     <a href="index.html" id="scroll-up" style="display: inline;"></a>
-    <!-- Maker badge -->
-    <script type="text/javascript">
-        (function (w,d) {
-            w.makerbadge = {}, methods = ['init'];
-            w.makerbadge._c = [];
-            methods.forEach(m => {
-                w.makerbadge[m] = function () {
-                    w.makerbadge._c.push([m, arguments]);
-                };
-            });
-
-            var el = d.createElement('script');
-            el.type = 'text/javascript';
-            el.async = true;
-            el.src = "https://makerbadge.com/js/shim.js";
-
-            var before = d.getElementsByTagName('script')[0];
-            before.parentNode.insertBefore(el, before);
-        }) (window, document);
-        makerbadge.init({ clientId: "d99137e9-ad0d-4d55-b23e-76e129def979", position: "left" }); 
-    </script>
-
     <!-- Ion Icons -->
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 
     <script src="main.js"></script>
 </body>
 
+
 <body>
     <nav class="navigation">
-        <a href="#" class="logo">
-            <img src="image/logo.jpg" alt="Can't display the image!">
+        <a href="#" class="logo" data-aos="fade-right">
+            <img src="image/logo.png" alt="Can't display the image!">
         </a>
 
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#" target="_blank">Commands</a></li>
-            <li><a href="#" target="_blank">Join us</a></li>
-            <li><a href="#" target="_blank">Vote</a></li>
+        <ul class="menu" data-aos="fade-down">
+            <li><a href="#main"><img src="image/nav01.png"
+                        alt="Navigation Image"></a></li>
+            <li><a href="#introduction"><img src="image/nav02.png"></a></li>
+            <li><a href="#movie"><img src="image/nav03.png"></a></li>
+            <li><a href="#story"><img src="image/nav04.png"></a></li>
+            <li><a href="#staff"><img src="image/nav05.png"></a></li>
+            <li><a href="#character"><img src="image/nav06.png"></a></li>
         </ul>
-        <a href="#" class="see-you" target="_blank">
-            <b>See You!</b> 
-        </a>
     </nav>
 
     <section id="main">
         <div class="main-text" data-aos="fade-up">
-            <h1>Cowboy Bebop</h1>
-            <p>Everything has a beginning and an end. <br>Life is just a cycle of starts and stops.</p>
-            <div class="main-btns">
-                <a href="#" target="_blank" class="btn-space"><b>To Space</b></a>
-                <a href="#" target="_blank" class="btn-earth"><b>To Earth</b></a>
-            </div>
+            <img src="image/main_title02.png" class="left-img">
         </div>
-
-        <!-- Mode-BG -->
-        <div class="model">
-            <img src="image/bg1.jpg" data-aos="fade-up">
-        </div>
+        <img src="image/main_copy02.png" class="right-img" data-aos="fade-left">
     </section>
 
-    <!-- About -->
-    <section id="about">
-        <div class="about-text-section" data-aos="fade-up">
-            <div class="about-heading" data-aos="fade-up">
-                <span>About</span>
-                <p>Aboard the spaceship Bebop, a bounty hunter and his group of skilled comrades embark on adventures across the Solar System to capture criminals.</p>
-            </div>
-
-            <div class="about-img" data-aos="fade-up">
-                <img src="image/spike.gif" alt="Group Photo">
-            </div>
-        </div>
-
-        <!-- About Image Section -->
-        <aisle>
-            <div class="about-box-container">
-                <div class="about-box" data-aos="fade-up">
-                    <div class="about-box-icon">
-                        <i>1</i>
-                    </div>
-                    <div class="s-box-text">
-                        <strong>Spike Spiegel</strong>
-                        <p>Voiced by: Kōichi Yamadera (Japanese)<br>Portrayed by: John Cho</p>
-                    </div>
-                </div>
-
-                <div class="about-box" data-aos="fade-up">
-                    <div class="about-box-icon">
-                        <i>2</i>
-                    </div>
-                    <div class="about-box-text">
-                        <strong>Faye Valentine</strong>
-						<p>Voiced by: Megumi Hayashibara (Japanese)<br>Portrayed by: Daniella Pineda</p>
-                    </div>
-                </div>
-
-                <div class="about-box" data-aos="fade-up">
-                    <div class="about-box-icon">
-                        <i>3</i>
-                    </div>
-                    <div class="about-box-text">
-                        <strong>Jet Black</strong>
-						<p>Voiced by: Unshō Ishizuka (Japanese)<br>Portrayed by: Mustafa Shakir</p>
-                    </div>
-                </div>
-
-                <div class="about-box" data-aos="fade-up">
-                    <div class="about-box-icon">
-                        <i>4</i>
-                    </div>
-                    <div class="about-box-text">
-                        <strong>Ed</strong>
-						<p>Voiced by: Aoi Tada (Japanese)<br>Portrayed by: Eden Perkins</p>
-                    </div>
-                </div>
-
-                <div class="about-box" data-aos="fade-up">
-                    <div class="about-box-icon">
-                        <i>5</i>
-                    </div>
-                    <div class="about-box-text">
-                        <strong>Ein</strong>
-						<p>Voiced by: Kōichi Yamadera</p>
-                    </div>
-                </div>
-            </div>
-            
-        </aisle>
-    </section>
 
 
     <section id="introduction">
         <!-- Heading -->
         <div class="intro-heading" data-aos="fade-up">
-            <strong>Introduction</strong>
-            <p>Let me introduce myself!</p>
-        </div>
-
-        <!-- Intro Video -->
-        <div class="intro-video" data-aos="fade-up">
-            <iframe src="" frameborder="0.5"></iframe>
-        </div>
-    </section>
-
-
-    <section id="features">
-        <!-- Heading -->
-        <strong class="feature-heading" data-aos="fade-up">Features</strong>
-
-        <!-- Features -->
-        <div class="feature-box-container">
-            <div class="service-box" data-aos="fade-up">
-                <!-- Icon -->
-                <i class="fas fa-code"></i>
-                <!-- Heading -->
-                <strong>Easy to Use</strong>
-                <!-- Details -->
-                <p>Easy to use and user-friendly interface.</p>
+            <strong>Introduction</strong><br><br><br><br>
+            <div class="intro-subtitle" data-aos="fade-up">
+                <img src="image/intro_copy01.png"><br><br><br>
             </div>
-
-            <div class="service-box" data-aos="fade-up">
-                <!-- Icon -->
-                <i class="fas fa-cogs"></i>
-                <!-- Heading -->
-                <strong>Second</strong>
-                <!-- Details -->
-                <p>Second Input</p>
+            <div class="intro-subtitle1" data-aos="fade-up">
+                <img src="image/intro_copy02.png"><br><br><br>
             </div>
-
-            <div class="service-box" data-aos="fade-up">
-                <!-- Icon -->
-                <i class="fas fa-drafting-compass"></i>
-                <!-- Heading -->
-                <strong>Third</strong>
-                <!-- Details -->
-                <p>Third Input</p>
+            <div data-aos="fade-up">
+                <p>『秒速5センチメートル』（07年）、『言の葉の庭』（13年）など<br>
+                    意欲的な作品を数多く作り出してきた気鋭のアニメーション映画監督・新海誠。<br><br>
+                    精緻な風景描写とすれ違う男女の物語を、美しい色彩と繊細な言葉によって紡ぎ出す“新海ワールド”は、<br>
+                    世代や業界、国内外を問わず人々に大きな刺激と影響をおよぼしてきた。<br><br>
+                    新海誠監督の待望の新作となる『君の名は。』は、夢の中で“入れ替わる”少年と少女の恋と奇跡の物語。<br><br>
+                    世界の違う二人の隔たりと繋がりから生まれる「距離」のドラマを圧倒的な映像美とスケールで描き出す。<br><br>
+                    作画監督を務めるのは『千と千尋の神隠し』（01年）など<br>
+                    数多くのスタジオジブリ作品を手掛けた、アニメーション界のレジェンド、安藤雅司。<br><br>
+                    また、『心が叫びたがってるんだ。』（15年）などで新時代を代表するアニメーターとなった<br>
+                    田中将賀をキャラクターデザインに迎えるなど、日本最高峰のスタッフがスタジオに集結した。<br><br>
+                    そして、主題歌を含む音楽は、その唯一無二の世界観と旋律で熱狂的な支持を集めるロックバンド・RADWIMPSが担当する。<br><br>
+                    声の出演として、三葉が夢の中で見た男の子・瀧役に同世代の中でひときわ異彩を放つ演技派俳優、神木隆之介。<br><br>
+                    また、自らの運命に翻弄されていくヒロイン・三葉役を、オーディションでその役を射止めた上白石萌音。<br><br>
+                    更には長澤まさみ、市原悦子ほかアニメーションと実写の垣根を越えたまさに豪華キャスティングが実現した。<br><br>
+                </p>
             </div>
-
-            <div class="service-box" data-aos="fade-up">
-                <!-- Icon -->
-                <i class="fas fa-chart-bar"></i>
-                <!-- Heading -->
-                <strong>Fourth</strong>
-                <!-- Details -->
-                <p>Fourth Input</p>
+            <div class="intro-subtitle2" data-aos="fade-up">
+                <p>誰もが経験したことのない、アニメーションの新領域。<br>
+                    新たな“不朽の名作”が誕生する！</p>
             </div>
         </div>
     </section>
 
-    <section id="get-in-touch" data-aos="fade-up">
-        <span>Get in Touch</span>
-        <a href="#" target="_blank">Contact Me</a>
+
+    <section id="movie">
+        <div class="movie-heading" data-aos="fade-up">
+            <strong>Movie</strong>
+        </div>
+        <div class="movie-button">
+            <a href="#" data-video="https://www.youtube.com/embed/3KR8_igDs1Y" data-aos="fade-right">「君の名は。」予告</a>
+            <a href="#" data-video="https://www.youtube.com/embed/f3N0pzJ8w1c" data-aos="fade-up">「君の名は。」予告2</a>
+            <a href="#" data-video="https://www.youtube.com/embed/k4xGqY5IDBE" data-aos="fade-left">「君の名は。」予告3</a>
+        </div>
+        <div class="movie-box" data-aos="fade-up">
+            <iframe src="https://www.youtube.com/embed/3KR8_igDs1Y" frameborder="0" allowfullscreen></iframe>
+        </div>
     </section>
 
-    <!-- Client -->
-    <section id="client">
-        <div class="client-heading" data-aos="fade-up">
-            <strong class="feature-heading" data-aos="fade-up">Client</strong>
-            <div class="c-box-container">
-                <div class="client-box">
-                    <img src="mario-mystery-box.gif">
-                    <p>Put here</p>
+
+    <!-- Story -->
+    <section id="story">
+        <div class="story-class">
+            <div class="scroller" data-aos="fade-right">
+                <div class="scroller-inner">
+                    <img src="image/story_scene.jpg">
+                    <img src="image/story_scene.jpg">
                 </div>
             </div>
-            <br/>
 
-            <a href="#">
-                <img src="mario-mystery-box.gif">
-            </a>
-            <br/>
-            <a href="#">
-                <img src="mario-mystery-box.gif">
-            </a>
-            <br/>
+            <div class="story-text">
+                <strong data-aos="fade-up">Story</strong>
+                <p class="story-small" data-aos="fade-right">
+                    千年ぶりとなる彗星の来訪を一か月後に控えた日本。<br>
+                    山深い田舎町に暮らす女子高校生・三葉は憂鬱な毎日を過ごしていた。<br>
+                    町長である父の選挙運動に、家系の神社の古き風習。<br>
+                    小さく狭い町で、周囲の目が余計に気になる年頃だけに、都会への憧れを強くするばかり。<br>
+                </p>
+                <p class="story-big" data-aos="fade-up">
+                    「来世は東京のイケメン男子にしてくださーい！！！」<br>
+                </p>
+                <p class="story-small" data-aos="fade-left">
+                    そんなある日、自分が男の子になる夢を見る。<br>
+                    見覚えのない部屋、見知らぬ友人、目の前に広がるのは東京の街並み。<br>
+                    念願だった都会での生活を思いっきり満喫する三葉。<br><br>
+                    一方、東京で暮らす男子高校生、瀧も、奇妙な夢を見た。<br>
+                    行ったこともない山奥の町で、自分が女子高校生になっているのだ。<br><br>
+                    繰り返される不思議な夢。そして、明らかに抜け落ちている、記憶と時間。<br>
+                    二人は気付く。<br>
+                </p>
+                <p class="story-big" data-aos="fade-up">
+                    「私／俺たち、入れ替わってる！？」<br>
+                </p>
+                <p class="story-small" data-aos="fade-right">
+                    いく度も入れ替わる身体とその生活に戸惑いながらも、現実を少しずつ受け止める瀧と三葉。<br>
+                    残されたお互いのメモを通して、時にケンカし、<br>
+                    時に相手の人生を楽しみながら、状況を乗り切っていく。<br>
+                    しかし、気持ちが打ち解けてきた矢先、突然入れ替わりが途切れてしまう。<br>
+                    入れ替わりながら、同時に自分たちが特別に繋がっていたことに気付いた瀧は、<br>
+                    三葉に会いに行こうと決心する。<br>
+                </p>
+                <p class="story-big" data-aos="fade-up">
+                    「まだ会ったことのない君を、これから俺は探しに行く。」<br>
+                </p>
+                <p class="story-small" data-aos="fade-left">
+                    辿り着いた先には、意外な真実が待ち受けていた……。<br>
+                </p>
+                <p class="story-huge" data-aos="fade-up">
+                    出会うことのない二人の出逢い。<br>
+                    運命の歯車が、いま動き出す。<br>
+                </p>
+            </div>
         </div>
     </section>
 
+
+    <!-- Staff -->
+    <section id="staff">
+        <div class="staff-heading" data-aos="fade-up">
+            <strong>Staff</strong>
+        </div>
+
+        <!-- Director -->
+        <div class="director-image">
+            <img src="image/staff_shinkai_ph.png" alt="">
+        </div>
+        <div class="director-title">
+            <div class="director" data-aos="fade-up">
+                <strong>監督</strong>
+            </div>
+            <div class="director-name" data-aos="fade-up">
+                <p>新海誠</p>
+            </div>
+        </div>
+        <div class="director-text" data-aos="fade-up">
+            <p>
+                1973年生まれ、長野県出身。2002年、個人で制作した短編作品「ほしのこえ」でデビュー。同作品は、新世紀東京国際アニメフェア21「公募部門優秀賞」をはじめ多数の賞を受賞。2004年公開の初の長編映画『雲のむこう、約束の場所』では、その年の名だたる大作をおさえ、第59回毎日映画コンクール「アニメーション映画賞」を受賞。2007年公開の『秒速5センチメートル』で、アジアパシフィック映画祭「最優秀アニメ賞」、イタリアのフューチャーフィルム映画祭で「ランチア・プラチナグランプリ」を受賞。2011年に全国公開された『星を追う子ども』では、これまでとは違う新たな作品世界を展開、第八回中国国際動漫節「金猴賞」優秀賞受賞。2012年、内閣官房国家戦略室より「世界で活躍し『日本』を発信する日本人」として感謝状を受賞。2013年に公開された『言の葉の庭』では、自身最大のヒットを記録。ドイツのシュトゥットガルト国際アニメーション映画祭にて長編アニメーション部門のグランプリを受賞した。同年、信毎選賞受賞。次世代の監督として、国内外で高い評価と支持を受けている。
+            </p>
+        </div>
+        <div class="director-button" data-aos="fade-up">
+            <a href="https://www.shinkaiworks.com/" target="_blank" rel="noopener noreferrer">新海誠監督作品ポータルサイト</a>
+            <a id="openDirectorModalBtn" data-modal-target="#director-modal">これまでの監督作品</a>
+        </div>
+
+        <!-- Animation Director -->
+        <div class="director-title">
+            <div class="director" data-aos="fade-up">
+                <strong>作画監督</strong>
+            </div>
+            <div class="director-name" data-aos="fade-up">
+                <p>安藤雅司</p>
+            </div>
+        </div>
+        <div class="director-text" data-aos="fade-up">
+            <p>
+                1969年生まれ、広島県出身。1990年、研修生の二期生としてスタジオジブリ入社。宮崎駿監督作品『もののけ姫』（97年）、『千と千尋の神隠し』（01年）で作画監督を務める。2003年、フリーになって以降もジブリ作品に参加するほか、今敏監督作品などで才能を発揮。『思い出のマーニー』（14年）で14年ぶりにジブリ作品の作画監督を務め、同作品では脚本も担当している。キャラクターデザイン・作画監督を務めた作品に、『パプリカ』（06年）、『ももへの手紙』（12年）、原画参加作品に、『イノセンス』（04年）、『ヱヴァンゲリヲン新劇場版:Q』（12年）などがある。
+            </p>
+        </div>
+        <div class="director-button" data-aos="fade-up">
+            <a id="openAnimationModalBtn" data-modal-target="#animation-modal">INTERVIEW</a>
+        </div>
+
+        <!-- Character Design -->
+        <div class="director-title">
+            <div class="director" data-aos="fade-up">
+                <strong>キャラクターデザイン</strong>
+            </div>
+            <div class="director-name" data-aos="fade-up">
+                <p>田中将賀</p>
+            </div>
+        </div>
+        <div class="director-text" data-aos="fade-up">
+            <p>
+                1976年生まれ、広島県出身。代々木アニメーション学院卒業後、アートランドを経て現在はフリー。「プリンセスナイン
+                如月女子高野球部」（98年）でアニメーターデビュー、「家庭教師ヒットマンREBORN！」（06年～10年）でキャラクターデザインを初担当。長井龍雪監督とのタッグのもと、「とらドラ」（08年～09年）、「あの日見た花の名前を僕達はまだ知らない。」（11年）、「あの夏で待ってる」（12年）でキャラクターデザイン・総作画監督を手掛け、一躍注目を集める。長井監督の最新作『心が叫びたがってるんだ。』（15年）でもキャラクターデザイン・総作画監督を担当。新海誠監督とはＺ会のCM作品「クロスロード」で初タッグ。近年ではイラストレーターとしても活躍している。
+            </p>
+        </div>
+        <div class="director-button" data-aos="fade-up">
+            <a id="openCharacterModalBtn" data-modal-target="#character-modal">INTERVIEW</a>
+        </div>
+
+        <!-- Music -->
+        <div class="director-title">
+            <div class="director" data-aos="fade-up">
+                <strong>音楽</strong>
+            </div>
+            <div class="music-name" data-aos="fade-up">
+                <p>RADWIMPS</p>
+            </div>
+        </div>
+        <div class="director-text" data-aos="fade-up">
+            <p>
+                野田洋次郎（Vo./Gt./Pf.）, 桑原 彰（Gt.）,
+                武田祐介（Ba.）　2001年結成、2005年メジャーデビュー。ロック・ジャズ・ヒップホップから民族音楽まで縦横無尽に織りこまれ、「ジャンル」という既存の枠組にとらわれない音楽性。恋愛から死生観まで、哲学的、時にロマンティックに描き出した歌詞。大きなメディア露出がなかったにもかかわらず、ライブと口コミで着実に広がり、思春期を過ごす世代を中心に大きな支持を受けている。
+            </p>
+        </div>
+        <div class="director-button" data-aos="fade-up">
+            <a id="openMusicModalBtn" data-modal-target="#music-modal">INTERVIEW</a>
+        </div>
+    </section>
+
+
+    <!-- Modal Structure -->
+    <section id="modal">
+        <!-- Modal Director (In Button) -->
+        <div id="director-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-heading">
+                    <strong>これまでの監督作品</strong>
+                </div>
+                <div class="modal-row">
+                    <li>
+                        <p class="modal-image">
+                            <img src="image/shinkai_works01.png">
+                        </p>
+                        <p class="title">ほしのこえ</p>
+                        <p class="year">2002年公開</p>
+                        <p class="copyright">©Makoto Shinkai /<br>CoMix Wave Films</p>
+                        <p class="winning-headline">受賞歴</p>
+                        <p class="winning-detail">第1回新世紀東京国際アニメフェア21 公募部門優秀賞／第7回アニメーション神戸
+                            作品賞・パッケージ部門／第2回日本オタク大賞「トップをねらえ！」賞／第6回文化庁メディア芸術祭 特別賞／第8回AMD AWARD Best Director賞
+                            ／デジタルコンテンツグランプリ2002 エンターテイメント部門・映像デザイン賞／第34回星雲賞 メディア部門、アート部門</p>
+                    </li>
+                    <li>
+                        <p class="modal-image">
+                            <img src="image/shinkai_works02.png">
+                        </p>
+                        <p class="title">雲のむこう、約束の場所</p>
+                        <p class="year">2004年公開</p>
+                        <p class="copyright">©Makoto Shinkai /<br>CoMix Wave Films</p>
+                        <p class="winning-headline">受賞歴</p>
+                        <p class="winning-detail">東京国際アニメフェア2003 表現技術賞　※「パイロット版」にて／カナダファンタジア映画祭 アニメーション映画部門銀賞／第36回星雲賞
+                            アート部門／第59回毎日映画コンクール アニメーション映画賞／韓国SICAF2005“Feature Film（長編映画）”部門優秀賞</p>
+                    </li>
+                    <li>
+                        <p class="modal-image">
+                            <img src="image/shinkai_works03.png">
+                        </p>
+                        <p class="title">秒速5センチメートル</p>
+                        <p class="year">2007年公開</p>
+                        <p class="copyright">©Makoto Shinkai /<br>CoMix Wave Films</p>
+                        <p class="winning-headline">受賞歴</p>
+                        <p class="winning-detail">アジアパシフィック映画祭“Best Animated Feature Film（最優秀アニメ賞）”／イタリアフューチャーフィルム映画祭
+                            ランチア・プラチナグランプリ</p>
+                    </li>
+                    <li>
+                        <p class="modal-image">
+                            <img src="image/shinkai_works04.png">
+                        </p>
+                        <p class="title">星を追う子ども</p>
+                        <p class="year">2011年公開</p>
+                        <p class="copyright">©Makoto Shinkai /<br>CMMMY</p>
+                        <p class="winning-headline">受賞歴</p>
+                        <p class="winning-detail">第八回中国国際動漫節「金猴賞」優秀賞／東京国際アニメフェア2012 アニメアワード美術賞</p>
+                    </li>
+                    <li>
+                        <p class="modal-image">
+                            <img src="image/shinkai_works05.png">
+                        </p>
+                        <p class="title">言の葉の庭</p>
+                        <p class="year">2013年公開</p>
+                        <p class="copyright">©Makoto Shinkai /<br>CoMix Wave Films</p>
+                        <p class="winning-headline">受賞歴</p>
+                        <p class="winning-detail">カナダファンタジア映画際 審査員賞“Satoshi Kon Award”、観客賞“Audience
+                            Award（最優秀劇場アニメーション）”／第18回アニメーション神戸 作品賞／iTunes Best of 2013
+                            今年のベストアニメーション選出／第21回ドイツシュトゥットガルト国際アニメーション映画祭　長編映画部門「AniMovie」最優秀賞</p>
+                    </li>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Animation Director (In Button) -->
+        <div id="animation-modal" class="modal">
+            <div class="animation-content">
+                <span class="close">&times;</span>
+                <div class="animation-heading">
+                    <img src="image/int_ando_title.png">
+                </div>
+                <div class="animation-join">
+                    <p class="animation-join-title">今作に参加した経緯</p>
+                    <p class="animation-join-text">
+                        この話をいただいた当初は、「驚いた」が正直な感想です（笑）。新海監督と自分、更に田中将賀さんと自分が、それまでに接点がないだけに、容易には考えられない組み合わせだと感じたからです。田中将賀さんの描き出すキャラクターはアニメーション的にまさに「華」がある、それに対して自分は地味に現実的な芝居付けをひたすらやってきた。その違いにある種の「引っ掛かり」を感じて色々なことを考えたのですが、結果的に今回参加する動機にもなりました。「どうなるんだろう」という、冒険的な感覚です。それに脚本を読むと、物語の構造からして面白そうじゃないですか。
+                    </p>
+                </div>
+                <div class="animation-join">
+                    <p class="animation-join-title">新海作品について</p>
+                    <p class="animation-join-text">
+                        自分たちよりも若く、新海世代というか、携帯電話世代の現実感のようなものを物語の中で「正直」に描いているという印象です。その正直さというのは世代的な産物モラルで断罪しない受容力を持っていると思います。新海監督のおだやかで真面目な性格や人間性が良く出ているのではないでしょうか。『君の名は。』は新海監督が持つマイナーとメジャーな部分を絶妙に繋いだ作品になっていて、誰でも受け止める事の出来る作品だと思います。
+                    </p>
+                </div>
+                <div class="animation-join">
+                    <p class="animation-join-title"></p>
+                    <div class="animation-image">
+                        <img src="image/int_ando_ph1.jpg">
+                        <img src="image/int_ando_ph2.jpg">
+                    </div>
+                </div>
+                <div class="animation-join">
+                    <p class="animation-join-title">意識したこと</p>
+                    <p class="animation-join-text">
+                        田中将賀さんの「華」のあるキャラクターを、どうすれば自分が今まで求めてきた「日常のリアリティ」の中で表現できるのか。キャラクターが、最終的にどのような表情を見せるのか。不安であると同時に楽しみでもあります。あと今作はシリアスとコミカルな部分の両方が入っていて作品としての幅がある。シリアスなシーンでは現実的な実感を伴う重い動き、コミカルなシーンでは軽妙な楽しい動きで見せられるようにこころがけました。ただ、その二面性を一つの作品でどう繋いでいくかは、本当に難しいことなんです。自分としても初めてのことも多く、まさにチャレンジですね（笑）。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Character Design (In Button) -->
+        <div id="character-modal" class="modal">
+            <div class="animation-content">
+                <span class="close">&times;</span>
+                <div class="animation-heading">
+                    <img src="image/int_tanaka_title.png">
+                </div>
+                <div class="animation-join">
+                    <p class="animation-join-title">『君の名は。』への参加</p>
+                    <p class="animation-join-text">
+                        ドタバタ劇のような要素のある明るいシーンが多い中で、物語の根幹にあるシリアスな場面においてもお芝居が成立するように見せられる絵が欲しいということがオファーのきっかけだったと思います。参加当初、登場する各キャラクターのアイデアを描いた時は、出来るだけ崩した表情の絵も加えて、監督に演出としてのイメージを掴んでもらえるようにしていました。
+                    </p>
+                </div>
+                <div class="animation-join">
+                    <p class="animation-join-title">最初に着手したキャラクター</p>
+                    <p class="animation-join-text">
+                        最初にできあがったのは三葉です。キャラクターのモチーフである「組紐」を使ったキャッチ―な髪型を考えて欲しいというお題を貰い、髪型先行で描いていきました。特に苦労したのは、瀧。まず新海監督とのキャラクターの擦り合わせがあって、どの程度、真面目なのか、おバカなのかの度合いを探るために何稿も出しました。中身が三葉に入れ替わった時でも気持ち悪くならないように、かわいらしい雰囲気の外見にした案も出たり(笑)最終的には、これまでの新海作品にはない、強いイメージの男の子になりました。三葉の友人である勅使河原も何度かやりとりしたキャラクターです。僕としては田舎のヤンキーにしたかったんですが（笑）。
+                    </p>
+                </div>
+                <div class="animation-join">
+                    <p class="animation-join-title"></p>
+                    <div class="animation-image">
+                        <img src="image/int_tanaka_ph1.jpg">
+                        <img src="image/int_tanaka_ph2.jpg">
+                    </div>
+                </div>
+                <div class="animation-join">
+                    <p class="animation-join-title">新海誠監督の印象</p>
+                    <p class="animation-join-text">
+                        大好きで、作品も全て観ています。物事をきちんと吟味され、周りや自分をうまくコントロールしながら映画を作りだしていく印象です。それでいて作り出す作品はどれも瑞々しい。Z会のCMの『クロスロード』では、そんな瑞々しさに自分が入り込んでも大丈夫なんだろうかという不安が当初ありました（笑）。でも、自分がそれまでに培ったものを、新海監督であればうまく融合してくれるという確信があり、その事を証明したくてご一緒しました。あの作品があったから、『君の名は｡』にもすんなり入ることができました。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Music (In Button) -->
+        <div id="music-modal" class="modal">
+            <div class="music-content">
+                <span class="close">&times;</span>
+                <div class="music-name">
+                    <p>RADWIMPS</p>
+                </div>
+                <div>
+                    <p class="music-text">
+                        ど真ん中を真っすぐに突き進む—この映画から強く受けた印象です。主題歌4曲全てがラブソング。いつもは、つい逃げがちな性格で、ここまでストレートに表現してしまうと恥ずかしさが出てしまい、別の方向性や受け止められ方を求めてしまうんです。だから「恋」をこんなに真っ正面に表現したこと自体、本当に珍しいこと。今回も最初はどこか無意識な逃げがあって、新海監督はその部分を見逃さなかった。「とにかくこの物語が貫こうとしているど真ん中を全力で歌って欲しい」と。だからこそ、踏み込めた。まだ恋愛をしたことがない人でも、『君の名は。』はいつしか自分がたどるんじゃないかという未来を感じさせてくれる物語だと思います。間違いなく僕も瀧と三葉に引き込まれました。（野田洋次郎）
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Character -->
+    <section id="character" class="character">
+        <div class="character-heading" data-aos="fade-up">
+            <strong>Cast & Characters</strong>
+        </div>
+        <div class="main-character-box">
+            <div class="taki">
+                <div class="taki-text">
+                    <strong data-aos="fade-right">立花 瀧</strong>
+                    <p data-aos="fade-right">
+                        東京の都心に暮らす男子高校生。日々、友人たちと楽しく過ごし、イタリアンレストランでバイト中。同僚の奥寺先輩へひそかに好意を寄せている。建築や美術に興味を持っている。
+                    </p>
+                    <div class="taki-pp" data-aos="fade-right">
+                        <img src="image/chara_taki_face01.png">
+                        <img src="image/chara_taki_face02.png">
+                    </div>
+                </div>
+                <div class="taki-image" data-aos="fade-up">
+                    <img src="image/chara_taki_vsl.png">
+                </div>
+            </div>
+
+            <div class="mitsuha">
+                <div class="mitsuha">
+                    <div class="mitsuha-image" data-aos="fade-up">
+                        <img src="image/chara_mitsuha_vsl.png">
+                    </div>
+                    <div class="mitsuha-text" data-aos="fade-left">
+                        <strong data-aos="fade-left">宮水 三葉</strong>
+                        <p>
+                            山深い田舎町に住む女子高校生。町長である父は家を出ており、小学生の妹、祖母と３人暮らし。性格は素直だが、家系の神社の風習や、父の選挙運動などに嫌気が差している。友人たちと小さく狭い町を嘆き、東京の華やかな生活に憧れを抱いている。
+                        </p>
+                        <div class="mitsuha-pp" data-aos="fade-left">
+                            <img src="image/chara_mitsuha_face01.png">
+                            <img src="image/chara_mitsuha_face02.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-cast-box">
+            <div class="main-cast-1">
+                <div class="main-cast-top-left" data-aos="fade-right">
+                    <img src="image/chara_kamiki_name.png">
+                    <img src="image/chara_kamiki_ph.png">
+                </div>
+                <div class="main-cast-bottom" data-aos="fade-up">
+                    <p>
+                        1993年5月19日生まれ、埼玉県出身。1999年、ドラマ「グッドニュース」（TBS）でデビュー。映画『妖怪大戦争』（05年）で第29回日本アカデミー賞新人俳優賞を受賞。近年の出演作に、『桐島、部活やめるってよ』（12年）、『るろうに剣心
+                        京都大火編／伝説の最期編』（14年）、『神さまの言うとおり』（14年）、『バクマン。』（15年）、『太陽』（16年）、『TOO YOUNG TO DIE！
+                        若くして死ぬ』（16年）など。2017年には主演作『3月のライオン』（前編・後編）が公開予定。アニメーション映画への声の出演としては、『千と千尋の神隠し』（01年）、『ハウルの動く城』（04年）、『サマーウォーズ』（09年）、『借りぐらしのアリエッティ』（10年）、『とある飛空士への追憶』（11年）などの作品に参加し、高い評価を得ている。
+                    </p>
+                </div>
+            </div>
+            <div class="main-cast-2">
+                <div class="main-cast-top-right" data-aos="fade-left">
+                    <img src="image/chara_kamishiraishi_ph.png">
+                    <img src="image/chara_kamishiraishi_name.png">
+                </div>
+                <div class="main-cast-bottom" data-aos="fade-up">
+                    <p>
+                        1998年1月27日生まれ、鹿児島県出身。2011年、第7回「東宝シンデレラ」オーディション審査員特別賞を受賞して、「江～姫たちの戦国～」（11年NHK）で女優デビュー。『舞妓はレディ』（14年）では800名の応募者からオーディションを勝ち抜き、主人公・春子に大抜擢される。同作品で、山路ふみ子映画賞・第26回新人女優賞、第38回日本アカデミー賞新人俳優賞を受賞。ほか出演作に、ショートムービー『空色物語
+                        第四話「上白石萌音～ニケとかたつむり～」』（11年）、映画『だいじょうぶ３組』（13年）、 『ちはやふる
+                        上の句／下の句』（16年）。『溺れるナイフ』（16年秋公開予定）。声優としては、『おおかみこどもの雨と雪』（12年）に出演している。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-character-box">
+            <div class="sub-character-1">
+                <div class="sub-character-top" data-aos="fade-right">
+                    <img src="image/chara_miki_face01.png">
+                    <div class="sub-character-text">
+                        <img src="image/chara_miki_name.png">
+                        <p>
+                            瀧のアルバイト先の先輩。美人でオシャレな女子大生で、瀧も含めた男子たちの憧れの的。
+                        </p>
+                    </div>
+                </div>
+                <div class="sub-character-bottom" data-aos="fade-up">
+                    <img src="image/chara_miki_ss01.png">
+                    <img src="image/chara_miki_ss02.png">
+                </div>
+            </div>
+            <div class="sub-character-2">
+                <div class="sub-character-top" data-aos="fade-left">
+                    <img src="image/chara_hitoha_face01.png">
+                    <div class="sub-character-text">
+                        <img src="image/chara_hitoha_name.png">
+                        <p>
+                            三葉の祖母。宮水神社の現在の神主。三葉の母である娘が亡くなり、三葉の父が家を出たあと、三葉と四葉を女手一つで育ててきた。
+                        </p>
+                    </div>
+                </div>
+                <div class="sub-character-bottom" data-aos="fade-up">
+                    <img src="image/chara_hitoha_ss01.png">
+                    <img src="image/chara_hitoha_ss02.png">
+                </div>
+            </div>
+        </div>
+
+        <!-- Sub Character, but use the same container as the main cast -->
+        <div class="main-cast-box">
+            <div class="main-cast-1">
+                <div class="main-cast-top-left" data-aos="fade-left">
+                    <img src="image/chara_miki_cv_name.png">
+                    <img src="image/chara_miki_cv_ph.png">
+                </div>
+                <div class="main-cast-bottom" data-aos="fade-up">
+                    <p>
+                        1987年6月3日生まれ、静岡県出身。2000年、第5回「東宝シンデレラ」オーディションでグランプリを獲得。同年『クロスファイア』で女優デビュー。2003年、映画初主演を務めた『ロボコン』で第27回日本アカデミー賞新人俳優賞を受賞。2004年、『世界の中心で、愛をさけぶ』で第28回日本アカデミー賞最優秀助演女優賞・話題賞など数々の賞に輝く。近年の出演作は『海街diary』（15年）、『アイアムアヒーロー』（16年）、
+                        『グッドモーニングショー』（16年10月8日公開）、『金メダル男』（16年10月22日公開）、『追憶』（17年公開予定）。『コクリコ坂から』（11年）、『映画 妖怪ウォッチ
+                        エンマ大王と5つの物語だニャン！』（15年）といったアニメーション作品で声優を務めている。 </p>
+                </div>
+            </div>
+            <div class="main-cast-2">
+                <div class="main-cast-top-right" data-aos="fade-right">
+                    <img src="image/chara_hitoha_cv_ph.png">
+                    <img src="image/chara_hitoha_cv_name.png">
+                </div>
+                <div class="main-cast-bottom" data-aos="fade-up">
+                    <p>
+                        千葉県出身。劇団俳優座出身。「三文オペラ」「近松心中物語」「ディア・ライアー」「ゆらゆら」など多数の舞台で数々の演劇賞を受賞。第13回日本アカデミー賞最優秀助演女優賞を受賞した『黒い雨』（89年）をはじめ、『うなぎ』（97年）、『蕨野行』（03年）、『あん』（15年）などの映画作品のほか、ドラマ「家政婦は見た！」シリーズ（84～08年／EX）、アニメーション「まんが日本昔ばなし」（75年～／MBS）の語りなど映像の世界でも幅広く活躍。ナレーション、朗読など、声の仕事も精力的に務めている。
+                        第四話「上白石萌音～ニケとかたつむり～」』（11年）、映画『だいじょうぶ３組』（13年）、 『ちはやふる
+                        上の句／下の句』（16年）。『溺れるナイフ』（16年秋公開予定）。声優としては、『おおかみこどもの雨と雪』（12年）に出演している。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other Sub Characters -->
+        <div class="sub-character-container">
+            <!-- First Sub Character -->
+            <div class="sub-character-container-inner">
+                <div class="sub-character" data-aos="fade-right">
+                    <div class="sub-character-image">
+                        <img src="image/chara_teshigawara_ph.png">
+                    </div>
+                    <div class="sub-character-about">
+                        <img class="sub-character-name-1" src="image/chara_teshigawara_name.png">
+                        <p>
+                            三葉の同級生。オカルトマニアで機械オタク。地元で建築業を営む父に複雑な思いを抱いている。三葉のことが気になっている。
+                        </p>
+                    </div>
+                </div>
+                <div class="sub-cast" data-aos="fade-left">
+                    <div class="sub-cast-image">
+                        <img src="image/chara_teshigawara_cv_ph.png">
+                    </div>
+                    <div class="sub-cast-about">
+                        <img src="image/chara_teshigawara_cv_name.png">
+                        <p>
+                            1993年11月22日生まれ、埼玉県出身。2013年より『MEN'S NON-NO』（集英社）専属モデルとして活動。主な出演：映画『飛べないコトリとメリーゴーランド』（15年）、『残穢－住んではいけない部屋－』（16年） 、ドラマ「FLASHBACK」（14年／フジテレビNEXT）、「学校のカイダン」（15年／NTV）、「ふれなばおちん」（16年／NHK BSプレミアム）
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Sub Character -->
+            <div class="sub-character-container-inner">
+                <div class="sub-character" data-aos="fade-right">
+                    <div class="sub-character-image">
+                        <img src="image/chara_natori_ph.png">
+                    </div>
+                    <div class="sub-character-about">
+                        <img src="image/chara_natori_name.png">
+                        <p>
+                            三葉の同級生。幼馴染であり親友。おっとりしているが常識人。勅使河原に想いを寄せている。姉は町役場で放送を担当している。
+                        </p>
+                    </div>
+                </div>
+                <div class="sub-cast" data-aos="fade-left">
+                    <div class="sub-cast-image">
+                        <img src="image/chara_natori_cv_ph.png">
+                    </div>
+                    <div class="sub-cast-about">
+                        <img src="image/chara_natori_cv_name.png">
+                        <p>
+                            1992年3月27日生まれ、千葉県出身。　主な出演：「ポケットモンスター ベストウイッシュ」（10年／TX・アイリス役）、「魔法少女まどか☆マギカ」（11年／MBS・鹿目まどか役）、「戦姫絶唱シンフォギア」（12年／MX・立花響役）、「妖怪ウォッチ」（15年／TX・未空イナホ役）、「僕のヒーローアカデミア」（16年／MBS・蛙吹梅雨役）、「僕だけがいない街」（16年／CX・雛月加代役）
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third Sub Character -->
+            <div class="sub-character-container-inner">
+                <div class="sub-character" data-aos="fade-right">
+                    <div class="sub-character-image">
+                        <img src="image/chara_fujii_ph.png">
+                    </div>
+                    <div class="sub-character-about">
+                        <img src="image/chara_fujii_name.png">
+                        <p>
+                            瀧の高校の友人。クールにみえるが意外と世話好きな一面も。瀧と同じく建築に興味がある。
+                        </p>
+                    </div>
+                </div>
+                <div class="sub-cast" data-aos="fade-left">
+                    <div class="sub-cast-image">
+                        <img src="image/chara_fujii_cv_ph.png">
+                    </div>
+                    <div class="sub-cast-about">
+                        <img src="image/chara_fujii_cv_name.png">
+                        <p>
+                            1988年12月6日生まれ、宮城県出身。　主な出演：「あの夏で待ってる」（12年／MX・霧島海人役）、「黒子のバスケ」（12年／MBS・桜井良役）、「ダイヤのA」（13～16年／TX・降谷暁役）、「Free！」（13年／ＡＢＣ・七瀬遙役）、「寄生獣 セイの格率」（14年／NTV・泉新一役）、「俺物語!!」（15年／NTV・砂川誠役）、「暗殺教室」（16年／CX・“死神”役）、「斉木楠雄のΨ難」（16年／TX・海藤瞬役）
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fourth Sub Character -->
+            <div class="sub-character-container-inner">
+                <div class="sub-character" data-aos="fade-right">
+                    <div class="sub-character-image">
+                        <img src="image/chara_takagi_ph.png">
+                    </div>
+                    <div class="sub-character-about">
+                        <img src="image/chara_takagi_name.png">
+                        <p>
+                            瀧の高校の友人。大柄でサッパリした性格。瀧や司と一緒に、放課後はカフェ巡りをしている。
+                        </p>
+                    </div>
+                </div>
+                <div class="sub-cast" data-aos="fade-left">
+                    <div class="sub-cast-image">
+                        <img src="image/chara_takagi_cv_ph.png">
+                    </div>
+                    <div class="sub-cast-about">
+                        <img src="image/chara_takagi_cv_name.png">
+                        <p>
+                            1993年10月13日生まれ、東京都出身。　主な出演：「ハイキュー!!」（14年／MBS・影山飛雄役）、「残響のテロル」（14年／CX・ナイン役）、「コンクリート・レボルティオ～超人幻想～」（15年／TOKYO MX・人吉爾朗役）、「境界のRINNE」（15年／NHK・六道りんね役）、「ワンパンマン」（15年／TX・ジェノス役）、「僕のヒーローアカデミア」（16年／MBS・飯田天哉役）
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fifth Sub Character -->
+            <div class="sub-character-container-inner">
+                <div class="sub-character" data-aos="fade-right">
+                    <div class="sub-character-image">
+                        <img src="image/chara_yotsuha_ph.png">
+                    </div>
+                    <div class="sub-character-about">
+                        <img src="image/chara_yotsuha_name.png">
+                        <p>
+                            三葉の妹。しっかりものでイマドキな小学4年生。祖母や三葉と一緒に、神社の家業を手伝う。
+                        </p>
+                    </div>
+                </div>
+                <div class="sub-cast" data-aos="fade-left">
+                    <div class="sub-cast-image">
+                        <img src="image/chara_yotsuha_cv_ph.png">
+                    </div>
+                    <div class="sub-cast-about">
+                        <img src="image/chara_yotsuha_cv_name.png">
+                        <p>
+                            2004年5月4日生まれ、埼玉県出身。　主な出演：映画『上京ものがたり』（13年）、ドラマ「名前をなくした女神」（11年／CX）、「全開ガール」（11年／CX）、「あの日見た花の名前を僕達はまだ知らない。」（15年／CX）、舞台『Paco～パコと魔法の絵本～from「ガマ王子vsザリガニ魔人」』（14年）                        
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
     <footer>
-        <!-- Copyright -->
-        <span class="copyright">Copyright © HEHEHE. All right reserved.</span>
-        <!-- Footer Social Links -->
-        <div class="footer-social">
-            <!-- Youtube -->
-            <a href="#">
-                <i class="fab fa-youtube"></i>
-            </a>
+        <div class="footer-name">
+            <div class="footer-name-big">
+                神木隆之介 上白石萌音
+            </div>
+            <div class="footer-name-small">
+                成田凌 悠木碧 島﨑信長 石川界人 谷花音 長澤まさみ 市原悦子
+            </div>
+            <p>
+                製作／市川南　川口典孝　大田圭二　共同製作／井上伸一郎　弓矢政法　畠中達郎　善木準二　坂本健　企画・プロデュース／川村元気　エグゼクティブプロデューサー／古澤佳寛　プロデューサー／武井克弘　伊藤耕一郎　制作プロデューサー／酒井雄一　音楽プロデューサー／成川沙世子　音響監督／山田陽　音響効果／森川永子
+            </p>
+
+            <p>
+                原作・脚本・監督／新海誠　作画監督／安藤雅司　キャラクターデザイン／田中将賀　音楽／RADWIMPS
+            </p>
+
+            <p>
+                Jimthereal made this shit.
+            </p>
+            <br><br>
         </div>
     </footer>
 </body>
+
 </html>
